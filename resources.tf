@@ -142,7 +142,7 @@ resource "aws_lambda_function" "results_updates_lambda" {
     role             = "${aws_iam_role.lambda_role.arn}"
     handler          = "example.handler"
     source_code_hash = "${data.archive_file.lambda_zip.output_base64sha256}"
-    runtime          = "nodejs12.x"
+    runtime          = "python3.9"
 
     environment {
         variables = {
